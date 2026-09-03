@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body{
+    overflow-x: hidden
+}
+
+.nav{
+    width: calc(100% - 80px);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    z-index: 10;
+}
+
+.menu{
+    display: flex;
+    gap: 40px;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    background: darkolivegreen;
+}
+
+#page2{
+    width: 100%;
+    height: 100vh;
+    background: darkcyan;
+    z-index: 9;
+}
+
+h1{
+    font-size: 40vw;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: translateX(50%);
+}
+
+#page3{
+    width: 100%;
+    height: 100vh;
+    background: darkseagreen;
+}
