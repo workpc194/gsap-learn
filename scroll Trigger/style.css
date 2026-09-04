@@ -35,8 +35,19 @@ body{
 #page1{
     width: 100%;
     height: 100vh;
-    background: darkolivegreen;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+h3{
+    font-size: 60px;
+    height: 80px;
+    overflow: hidden;
+}
+
+h3 span{display: inline-block;}
 
 #page2{
     width: 100%;
