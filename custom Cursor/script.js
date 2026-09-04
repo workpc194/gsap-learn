@@ -3,7 +3,7 @@ const cursor = document.querySelector('#cursor')
 const imageDiv = document.querySelector('#image')
 
 
-main.addEventListener('mousemove', (e)=>{
+window.addEventListener('mousemove', (e)=>{
     gsap.to(cursor, {
         x: e.x,
         y: e.y,
@@ -26,4 +26,28 @@ imageDiv.addEventListener('mouseleave', ()=>{
         opacity: 1,
         duration: 0.8
     })
+})
+
+window.addEventListener('wheel', (elem)=>{
+    if(elem.deltaY > 0){
+        gsap.to('.item', {
+            transform: 'translateX(-200%)',
+            duration: 2,
+            repeat: -1,
+            ease: 'none'
+        })
+        gsap.to('.item i', {
+            rotate: 180,
+        })
+    } else{
+        gsap.to('.item', {
+            transform: 'translateX(0%)',
+            duration: 2,
+            repeat: -1,
+            ease: 'none'
+        })
+        gsap.to('.item i', {
+            rotate: 0,
+        })
+    }
 })
